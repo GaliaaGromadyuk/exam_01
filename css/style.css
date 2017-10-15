@@ -51,6 +51,8 @@ body {
     .ba-header__home-left {
       float: left;
       width: 50%; }
+    .ba-header__home-right {
+      float: right; }
     .ba-header__home-name {
       font-size: 90px;
       line-height: 1.5em;
