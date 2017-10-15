@@ -1,0 +1,139 @@
+$whiteColor: #ffffff;
+$textColor: #4c4c4c;
+$h1color:#333333;
+$anotherFont: 'Open Sans', sans-serif;
+body{
+	background:#fff;
+	font-family: 'Roboto', sans-serif;
+	font-size:16px;
+	line-height:1.7;
+	min-width:1400px;
+}
+@mixin btn($background, $width){
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 7.68px 0.32px rgba(0, 0, 0, 0.06);
+	width: 120px;
+	height: 48px;
+	background: $background;
+	width: $width;
+	text-transform: uppercase;
+	border-radius: 40px;;
+}
+.ba-header{
+	display:flex;
+	justify-content:center;
+	padding: 27px 8%;
+	background: url('../imgs/header-bg.png') no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+    color: #fff;
+    &__menu{
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+		margin-bottom: 300px;
+		&-btn{
+			@include btn(none, 120px);
+			&:hover{
+				opacity: 0.2;
+			}
+		}
+    }
+    &__logo img{
+    	height: 65px;
+    }
+    &__menu-item a{
+		margin-right: 45px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 18px;
+		color: $whiteColor;
+		&:hover{
+			border-bottom: 2px solid #fff;
+		}
+    }
+    &__home{
+    	position: relative;
+    	width: 100%;
+    	& p:first-child {
+    		font-size: 16px;
+    		text-transform: uppercase;
+    		margin-bottom: 0;
+    		opacity: 0.4;
+    	}
+    	&-left{
+    		float: left;
+    		width: 50%;
+    	}
+    	&-name{
+    		font-size: 90px;
+    		line-height: 1.5em;
+    		margin-top: 0;
+    		text-transform: uppercase;
+    	}
+    	&-description{
+    		margin-bottom: 90px;
+    	}
+    	&-btn1{
+    		@include btn(#fff, 180px);
+    		color: #510d78;
+    		font-size:26px;
+    		margin-right: 20px;
+    		&:hover{
+    			box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    		}
+    	}
+    	&-btn2{
+    		@include btn(none, 270px);
+    		font-size:26px;
+    		opacity: 0.2;
+    		&:hover{
+    			opacity: 0.75;
+    		}
+    	}
+    }
+}
+.ba-overview {
+	margin-top:130px;
+	padding: 27px 8%;
+	width: 100%;
+	height: 100%;
+	&__description{
+		width: 47%;
+		margin: 10px auto;
+		color: $textColor;
+	}
+
+	&__name h1{
+		@extend .ba-overview__description;
+		text-align: center;
+		color: $h1color;
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+	&__proposal{
+		display: flex;
+		justify-content: center;
+		margin-top: 150px;
+		&-item{
+		float: left;
+		width: 15%;
+		padding-left: 20px;
+		text-align: center;
+		& i{
+			font-size: 80px;
+			color: #3a8bed;
+		}
+		}
+		&-name {
+			font-size: 26px;
+			color: $h1color;
+			text-transform: uppercase;
+		}
+		&-description{
+			color: $textColor;
+			text-align: left;
+		}
+	}
+}
